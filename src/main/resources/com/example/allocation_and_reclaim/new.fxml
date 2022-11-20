@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="290.0" prefWidth="360.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.allocation_and_reclaim.New">
+    <children>
+        <Button fx:id="Button_Create" layoutX="123.0" layoutY="237.0" mnemonicParsing="false" onAction="#Create" text="创建" />
+        <Label layoutX="40.0" layoutY="120.0" prefHeight="30.0" prefWidth="70.0" text="优先级：" />
+        <Label layoutX="40.0" layoutY="150.0" prefHeight="30.0" prefWidth="70.0" text="PCB指针：" />
+        <Label layoutX="40.0" layoutY="30.0" prefHeight="30.0" prefWidth="70.0" text="PID:" />
+        <Label layoutX="40.0" layoutY="60.0" prefHeight="30.0" prefWidth="70.0" text="运行时间：" />
+        <ComboBox fx:id="Combo_Priority" layoutX="110.0" layoutY="120.0" prefHeight="30.0" prefWidth="200.0" value="7">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="0" />
+                    <String fx:value="1" />
+                    <String fx:value="2" />
+                    <String fx:value="3" />
+                    <String fx:value="4" />
+                    <String fx:value="5" />
+                    <String fx:value="6" />
+                    <String fx:value="7" />
+                </FXCollections>
+            </items>
+        </ComboBox>
+        <TextField fx:id="Text_Runtime" layoutX="110.0" layoutY="60.0" maxWidth="200.0" prefHeight="30.0" prefWidth="200.0" />
+        <TextField fx:id="Text_PID" layoutX="110.0" layoutY="30.0" prefHeight="30.0" prefWidth="200.0" />
+        <TextField fx:id="Text_PCBPtr" editable="false" layoutX="110.0" layoutY="150.0" prefHeight="30.0" prefWidth="200.0" text="(自动生成)" />
+        <Label layoutX="40.0" layoutY="90.0" prefHeight="30.0" prefWidth="70.0" text="大小：" />
+        <TextField fx:id="Text_Size" layoutX="110.0" layoutY="90.0" maxWidth="200.0" prefHeight="30.0" prefWidth="200.0" />
+      <Button fx:id="close" layoutX="195.0" layoutY="237.0" mnemonicParsing="false" onAction="#Close" text="关闭" />
+    </children>
+</AnchorPane>

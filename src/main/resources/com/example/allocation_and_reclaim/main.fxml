@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.allocation_and_reclaim.main">
+    <children>
+        <Label layoutX="721.0" prefHeight="30.0" text="Running" />
+        <Label layoutX="129.0" prefHeight="30.0" prefWidth="29.0" text="New" />
+        <Label layoutX="432.0" prefHeight="30.0" text="Ready" />
+        <Label layoutX="1008.0" layoutY="-1.0" prefHeight="30.0" text="Terminated" />
+        <TableView fx:id="TableView_NEW" layoutY="30.0" prefHeight="681.0" prefWidth="300.0">
+            <columns>
+                <TableColumn prefWidth="50.0" text="pid" />
+                <TableColumn prefWidth="40.0" text="优先级" />
+                <TableColumn prefWidth="40.0" text="基址" />
+                <TableColumn prefWidth="40.0" text="长度" />
+                <TableColumn minWidth="8.000015258789062" prefWidth="58.666656494140625" text="时间" />
+                <TableColumn prefWidth="81.33331298828125" text="PCB" />
+            </columns>
+        </TableView>
+        <TableView fx:id="TableView_Running" layoutX="600.0" layoutY="29.0" prefHeight="681.0" prefWidth="291.0">
+            <columns>
+                <TableColumn prefWidth="50.0" text="pid" />
+                <TableColumn prefWidth="40.0" text="优先级" />
+                <TableColumn prefWidth="40.0" text="基址" />
+                <TableColumn prefWidth="40.0" text="长度" />
+                <TableColumn prefWidth="40.0" text="时间" />
+                <TableColumn minWidth="8.000015258789062" prefWidth="100.0" text="PCB" />
+            </columns>
+        </TableView>
+        <TableView fx:id="TableView_Ready" layoutX="300.0" layoutY="30.0" prefHeight="681.0" prefWidth="300.0">
+            <columns>
+                <TableColumn prefWidth="50.0" text="pid" />
+                <TableColumn prefWidth="40.0" text="优先级" />
+                <TableColumn prefWidth="40.0" text="基址" />
+                <TableColumn prefWidth="40.0" text="长度" />
+                <TableColumn prefWidth="64.0" text="时间" />
+                <TableColumn minWidth="8.000015258789062" prefWidth="76.66668701171875" text="PCB" />
+            </columns>
+        </TableView>
+        <TableView fx:id="TableView_Terminated" layoutX="891.0" layoutY="29.0" prefHeight="681.0" prefWidth="300.0">
+            <columns>
+                <TableColumn prefWidth="50.0" text="pid" />
+                <TableColumn prefWidth="40.0" text="优先级" />
+                <TableColumn prefWidth="46.0" text="基址" />
+                <TableColumn prefWidth="33.99993896484375" text="长度" />
+                <TableColumn prefWidth="50.0" text="时间" />
+                <TableColumn minWidth="8.000015258789062" prefWidth="90.0" text="PCB" />
+            </columns>
+        </TableView>
+        <Button fx:id="Button_CreateCustomProcess" layoutX="189.0" layoutY="735.0" mnemonicParsing="false" onAction="#CreateCustomProcess" prefHeight="30.0" text="手动创建" />
+        <Button fx:id="Button_CreateManyProcesses" layoutX="435.0" layoutY="735.0" mnemonicParsing="false" onAction="#CreateManyProcesses" prefHeight="30.0" text="随机创建" />
+        <Button fx:id="Button_ClearAll" layoutX="544.0" layoutY="735.0" mnemonicParsing="false" onAction="#ClearAll" prefHeight="30.0" text="清空全部队列" />
+        <Label layoutX="1200.0" prefHeight="30.0" prefWidth="200.0" text="未分分区表：" />
+        <Label layoutX="1400.0" prefHeight="30.0" prefWidth="200.0" text="主存情况" />
+        <ListView fx:id="ListView_noAllocateTable" layoutX="1191.0" layoutY="29.0" prefHeight="681.0" prefWidth="200.0" />
+        <Button fx:id="Button_NextStep" layoutX="280.0" layoutY="735.0" mnemonicParsing="false" onAction="#NextStep" prefHeight="30.0" prefWidth="112.0" text="下一步" />
+        <AnchorPane fx:id="PANE_SHAPE" layoutX="1389.0" layoutY="30.0" prefHeight="681.0" prefWidth="211.0">
+            <children>
+                <Group fx:id="GROUP_SHAPE" />
+            </children></AnchorPane>
+    </children>
+</AnchorPane>
